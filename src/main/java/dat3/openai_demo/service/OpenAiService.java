@@ -88,7 +88,8 @@ public class OpenAiService {
       System.out.print("Tokens used: " + tokensUsed);
       System.out.print(". Cost ($0.0015 / 1K tokens) : $" + String.format("%6f",(tokensUsed * 0.0015 / 1000)));
       System.out.println(". For 1$, this is the amount of similar requests you can make: " + Math.round(1/(tokensUsed * 0.0015 / 1000)));
-      return new MyResponse(responseMsg);
+      ObjectMapper objectMapper = new ObjectMapper();
+      return new MyResponse(objectMapper.readTree(responseMsg));
     }
     catch (WebClientResponseException e){
       //This is how you can get the status code and message reported back by the remote API
