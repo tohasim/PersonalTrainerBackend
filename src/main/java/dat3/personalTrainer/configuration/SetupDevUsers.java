@@ -1,12 +1,10 @@
 package dat3.personalTrainer.configuration;
 
-import dat3.security.entity.Role;
-import dat3.security.entity.UserWithRoles;
+import dat3.security.repository.UserWithRolesRepository;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import dat3.security.repository.UserWithRolesRepository;
 
 @Controller
 public class SetupDevUsers implements ApplicationRunner {
@@ -35,7 +33,7 @@ public class SetupDevUsers implements ApplicationRunner {
 
      *****************************************************************************************/
     private void setupUserWithRoleUsers() {
-        System.out.println("******************************************************************************");
+/*        System.out.println("******************************************************************************");
         System.out.println("********** IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ************");
         System.out.println();
         System.out.println("******* NEVER  COMMIT/PUSH CODE WITH DEFAULT CREDENTIALS FOR REAL ************");
@@ -54,6 +52,6 @@ public class SetupDevUsers implements ApplicationRunner {
         userWithRolesRepository.save(user1);
         userWithRolesRepository.save(user2);
         userWithRolesRepository.save(user3);
-        userWithRolesRepository.save(user4);
+        userWithRolesRepository.save(user4);*/
     }
 }
