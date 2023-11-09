@@ -1,4 +1,4 @@
-package dat3.openai_demo.dtos;
+package dat3.personalTrainer.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.JsonNode;

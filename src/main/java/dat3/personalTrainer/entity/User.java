@@ -23,11 +23,12 @@ public class User extends UserWithRoles {
             @JsonBackReference
     Goal goal;
 
-    public User(String username, String email, String password, int age, double weightInKg, String gender) {
+    public User(String username, String email, String password, int age, double weightInKg, String gender, Goal goal) {
         super(username, email, password);
         this.age = age;
         this.weightInKg = weightInKg;
         this.gender = gender;
+        this.goal = goal;
     }
 
 }

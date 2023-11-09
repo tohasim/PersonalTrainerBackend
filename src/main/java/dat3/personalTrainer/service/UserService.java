@@ -1,7 +1,9 @@
 package dat3.personalTrainer.service;
 
 import dat3.personalTrainer.dto.GoalResponse;
+import dat3.personalTrainer.dto.UserRequest;
 import dat3.personalTrainer.dto.UserResponse;
+import dat3.personalTrainer.entity.Goal;
 import dat3.personalTrainer.entity.User;
 import dat3.personalTrainer.repository.UserRepository;
 import org.springframework.http.HttpStatus;
@@ -25,5 +27,11 @@ public class UserService {
 
     public GoalResponse getGoalsForUser(UserResponse userResponse){
         return goalService.getGoal(userResponse.getGoalId());
+    }
+
+    public UserResponse saveUser(UserRequest request) {
+        Goal goal = goalService.getGoalEntity(request.getGoalId());
+        User user = repository.save(UserRequest.getUserEntity(request, goal));
+        return new UserResponse(user);
     }
 }

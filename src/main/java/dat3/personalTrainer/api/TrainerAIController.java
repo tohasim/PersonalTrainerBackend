@@ -1,7 +1,7 @@
-package dat3.openai_demo.api;
+package dat3.personalTrainer.api;
 
-import dat3.openai_demo.dtos.MyResponse;
-import dat3.openai_demo.service.OpenAiService;
+import dat3.personalTrainer.dto.MyResponse;
+import dat3.personalTrainer.service.OpenAiService;
 import dat3.personalTrainer.dto.GoalResponse;
 import dat3.personalTrainer.dto.UserResponse;
 import dat3.personalTrainer.service.UserService;

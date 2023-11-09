@@ -67,7 +67,7 @@ public class UserWithRoles implements UserDetails {
   public UserWithRoles() {}
 
 
-  public UserWithRoles(String user, String password, String email){
+  public UserWithRoles(String user, String email, String password){
     this.username = user;
     setPassword(password);
     this.email = email;

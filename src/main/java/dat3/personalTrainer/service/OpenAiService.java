@@ -1,9 +1,9 @@
-package dat3.openai_demo.service;
+package dat3.personalTrainer.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dat3.openai_demo.dtos.ChatCompletionRequest;
-import dat3.openai_demo.dtos.ChatCompletionResponse;
-import dat3.openai_demo.dtos.MyResponse;
+import dat3.personalTrainer.dto.ChatCompletionRequest;
+import dat3.personalTrainer.dto.ChatCompletionResponse;
+import dat3.personalTrainer.dto.MyResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

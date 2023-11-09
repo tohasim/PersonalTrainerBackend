@@ -1,4 +1,4 @@
-package dat3.openai_demo.entity;
+package dat3.personalTrainer.entity;
 
 
 import jakarta.persistence.Entity;

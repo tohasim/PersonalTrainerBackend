@@ -13,14 +13,14 @@ import lombok.*;
 public class UserResponse {
     String username, email, gender;
     double weight;
-    Integer goalId, age;
+    Integer age, goalId;
 
     public UserResponse(User user) {
         age = user.getAge();
         username = user.getUsername();
         email = user.getEmail();
         weight = user.getWeightInKg();
-        goalId = user.getGoal().getId();
         gender = user.getGender();
+        goalId = user.getGoal().getId();
     }
 }

@@ -1,4 +1,4 @@
-package dat3.openai_demo.dtos;
+package dat3.personalTrainer.dto;
 
 import lombok.Getter;
 import lombok.Setter;

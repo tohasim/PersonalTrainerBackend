@@ -19,4 +19,7 @@ public class GoalService {
         Goal goal = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Goal with this id does not exist"));
         return new GoalResponse(goal);
     }
+    public Goal getGoalEntity(int id){
+        return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Goal with this id does not exist"));
+    }
 }
