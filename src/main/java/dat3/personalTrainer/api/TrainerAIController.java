@@ -147,7 +147,7 @@ public class TrainerAIController {
     return buckets.computeIfAbsent(key, k -> createNewBucket());
   }
 
-  @GetMapping("/plan")
+  @GetMapping("/create-plan")
   public MyResponse getResponseLimited(@RequestParam String username, HttpServletRequest request) {
     UserResponse userResponse = userService.getUser(username);
     GoalResponse goal = userService.getGoalsForUser(userResponse);

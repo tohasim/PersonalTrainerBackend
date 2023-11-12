@@ -19,6 +19,11 @@ public class User extends UserWithRoles {
     double weightInKg;
     String gender;
 
+    @OneToOne
+    @JsonBackReference
+    private ExercisePlan exercisePlan;
+
+
     @ManyToOne
             @JsonBackReference
     Goal goal;

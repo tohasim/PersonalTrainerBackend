@@ -79,6 +79,7 @@ public class SecurityConfig {
 
             //Use this to completely disable security (Will not work if endpoints has been marked with @PreAuthorize)
 //            .requestMatchers(mvcMatcherBuilder.pattern("/**")).permitAll());
+            .requestMatchers(mvcMatcherBuilder.pattern("/api/trainer/**")).hasAuthority("USER")
             .anyRequest().authenticated());
 
     return http.build();
